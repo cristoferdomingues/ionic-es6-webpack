@@ -13,6 +13,7 @@ import yargs     from 'yargs';
 import lodash    from 'lodash';
 import sass      from 'gulp-sass';
 import minifyCss from 'gulp-minify-css';
+import shell from 'gulp-shell';
 
 
 let reload = () => serve.reload();

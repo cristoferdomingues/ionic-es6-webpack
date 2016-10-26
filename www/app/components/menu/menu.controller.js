@@ -1,12 +1,11 @@
-class MenuController {
-  constructor($scope) {
-    this.name = 'menu';
-    this.init();
+export default class MenuController {
+  constructor() {
+   
   }
 
-  init(){
-	//code
+  $onInit(){
+	   console.log('menu!');
   }
 }
 
-export default ['$scope',MenuController];
+

@@ -2,11 +2,11 @@ import angular from 'angular';
 import Home from './home/home';
 import About from './about/about';
 import Menu from './menu/menu';
+import Login from './login/login';
 
-let componentModule = angular.module('app.components', [
-  Menu.name,
+export default  angular.module('app.components', [
+  Menu,
   Home.name,
-  About.name
-]);
-
-export default componentModule;
+  About.name,
+  Login
+]).name;

@@ -1,0 +1,8 @@
+node_modules
+.brackets.json
+.tern-defs/
+intelxdk.config.additions.xml
+ionic-webpack.xdk
+ionic-webpack.xdke
+xdk-publish-meta-data.json
+xdk/

@@ -1,12 +1,11 @@
-class <%= upCaseName %>Controller {
-  constructor(factory) {
-    this.name = '<%= name %>';
-    this.init();
-  }
+export default class <%= upCaseName %>Controller {
+    constructor(factory) {
+        this.name = '<%= name %>';
+    }
 
-  init(){
-	//code
-  }
+    $onInit() {
+        console.log('<%= upCaseName %>Controller Init');
+    }
 }
 
-export default ['<%= name %>.factory',<%= upCaseName %>Controller];
+<%= upCaseName %>Controller.$inject = ['<%= name %>.factory'];

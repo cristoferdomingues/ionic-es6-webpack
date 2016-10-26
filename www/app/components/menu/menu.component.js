@@ -1,15 +1,10 @@
 import template from './menu.html';
-import controller from './menu.controller';
+import MenuController from './menu.controller';
 
-let menuComponent = function () {
-  return {
-    restrict: 'E',
-    scope: {},
-    template,
-    controller,
-    controllerAs: 'vm',
-    bindToController: true
-  };
+
+let menuComponent = {
+    template: template,
+    controller: MenuController
 };
 
 export default menuComponent;

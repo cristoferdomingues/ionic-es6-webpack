@@ -5,7 +5,7 @@ import <%= name %>Component from './<%= name %>.component';
 import <%= name %>Factory from './<%= name %>.factory';
 import config from '../../config';
 
-let <%= name %>Module = angular.module('<%= name %>', [
+export default angular.module('<%= name %>', [
   uiRouter,
   Resource
 ])
@@ -18,13 +18,13 @@ let <%= name %>Module = angular.module('<%= name %>', [
       url: '/<%= name %>',
       views: {
 	      'menuContent': {
-	        templateUrl: config.pathHtml + '<%= name %>/<%= name %>.html',
+	        templateUrl: `${config.pathHtml}<%= name %>/<%= name %>.html`,
 		    }
 	    }
     });
 })
 
-.directive('<%= name %>View', <%= name %>Component)
-.factory('<%= name %>.factory', <%= name %>Factory); 
+.component('<%= name %>View', <%= name %>Component)
+.factory('<%= name %>.factory', <%= name %>Factory)
+.name; 
 
-export default <%= name %>Module;

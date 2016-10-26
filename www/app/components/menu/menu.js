@@ -1,26 +1,23 @@
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
-import controller from './menu.controller';
+import component from './menu.component';
 import config from '../../config';
 
-let menuModule = angular.module('menu', [
+export default angular.module('menu', [
   uiRouter
 ])
 
 .config(($stateProvider, $urlRouterProvider) => {
-  "ngInject";
+    "ngInject";
 
-  $stateProvider
-    .state('app', {
-      url: '/app',
-      abstract: true,
-      controller: 'menu.controller',
-      controllerAs: 'vm',
-      templateUrl: `${config.pathHtml}menu/menu.html`
-    });
+    $stateProvider
+        .state('app', {
+            url: '/app',
+            abstract: true,
+            template: '<menu></menu>'
+        });
 })
 
-.controller('menu.controller', controller)
+.component('menu', component)
 
-
-export default menuModule;
+.name;

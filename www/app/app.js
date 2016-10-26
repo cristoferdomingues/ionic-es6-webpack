@@ -3,13 +3,8 @@ import uiRouter from 'angular-ui-router';
 import 'ionic-sdk/release/js/ionic.bundle';
 import Components from './components/components';
 
-// Ionic Starter App
-//import start from './controllers';
-// angular.module is a global place for creating, registering and retrieving Angular modules
-// 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
-// the 2nd parameter is an array of 'requires'
-// 'starter.controllers' is found in controllers.js
-angular.module('app', ['ionic', Components.name])
+
+angular.module('app', ['ionic', Components])
 
 .run(($ionicPlatform) => {
   

@@ -1,15 +1,13 @@
 import template from './<%= name %>.component.html';
-import controller from './<%= name %>.controller';
+import <%= upCaseName %>Controller from './<%= name %>.controller';
 
-let <%= name %>Component = function () {
-  return {
-    restrict: 'E',
-    scope: {},
-    template,
-    controller,
-    controllerAs: 'vm',
-    bindToController: true
-  };
+let <%= name %>Component = {
+    template: template,
+    controller: <%= upCaseName %>Controller,
+    bindings:{
+        
+    }
 };
+
 
 export default <%= name %>Component;
